@@ -72,6 +72,9 @@
     <link rel="stylesheet" href="trade-page.css">
     <style>
         :root { --tc: #06b6d4; --tc-dark: #0e7490; --tc-light: rgba(6,182,212,0.12); --tc-glow: rgba(6,182,212,0.3); }
+        .hero-anim { position:absolute; inset:0; pointer-events:none; overflow:hidden; z-index:1; }
+        .wline { position:absolute; height:2px; border-radius:2px; background:linear-gradient(to right, transparent, rgba(6,182,212,0.55), rgba(6,182,212,0.3), transparent); animation:wind-sweep linear infinite; }
+        @keyframes wind-sweep { 0%{transform:translateX(-110%);opacity:0} 12%{opacity:1} 88%{opacity:.5} 100%{transform:translateX(120vw);opacity:0} }
     </style>
 </head>
 <body>
@@ -95,6 +98,18 @@
     <section class="hero">
         <div class="hero-bg"></div>
         <div class="hero-bg-grid"></div>
+        <div class="hero-anim">
+            <div class="wline" style="top:12%;width:220px;animation-duration:3.2s;animation-delay:0s"></div>
+            <div class="wline" style="top:19%;width:160px;animation-duration:4.1s;animation-delay:.8s"></div>
+            <div class="wline" style="top:28%;width:300px;animation-duration:2.8s;animation-delay:1.5s"></div>
+            <div class="wline" style="top:36%;width:180px;animation-duration:3.6s;animation-delay:.3s"></div>
+            <div class="wline" style="top:44%;width:250px;animation-duration:4.4s;animation-delay:2.1s"></div>
+            <div class="wline" style="top:53%;width:140px;animation-duration:3.0s;animation-delay:1.0s"></div>
+            <div class="wline" style="top:62%;width:280px;animation-duration:2.6s;animation-delay:.6s"></div>
+            <div class="wline" style="top:70%;width:200px;animation-duration:3.8s;animation-delay:1.8s"></div>
+            <div class="wline" style="top:78%;width:170px;animation-duration:4.2s;animation-delay:.4s"></div>
+            <div class="wline" style="top:86%;width:230px;animation-duration:3.4s;animation-delay:2.4s"></div>
+        </div>
         <div class="hero-content">
             <div class="hero-badge">&#10052; HVAC Websites — Bakersfield, CA</div>
             <h1>Bakersfield Summers Hit 110°.<br>Your Site Should<br><span class="accent">Hit Back Just as Hard.</span></h1>
@@ -245,9 +260,38 @@
             </div>
         </div>
     </section>
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <p class="section-label">Get In Touch</p>
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-body">Ready to get your HVAC business more calls? Reach out to our team directly.</p>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-card-icon">&#127760;</div>
+                    <strong>Website</strong>
+                    <a href="https://coaibakersfield.com" target="_blank" rel="noopener">coaibakersfield.com</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-icon">&#128119;</div>
+                    <strong>Jason</strong>
+                    <a href="mailto:jasonm@coaibakersfield.com">jasonm@coaibakersfield.com</a>
+                    <a href="tel:6615694244" class="contact-phone">(661) 569-4244</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-icon">&#128119;</div>
+                    <strong>Frank</strong>
+                    <a href="mailto:frankh@coaibakersfield.com">frankh@coaibakersfield.com</a>
+                    <a href="tel:6618637283" class="contact-phone">(661) 863-7283</a>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
-        <strong>Chaotically Organized AI</strong> &mdash; Bakersfield, CA &mdash; <a href="tel:6616109198">(661) 610-9198</a><br>
-        <span style="margin-top:0.4rem;display:block;">&copy; 2026 &mdash; <a href="index.html">&#8592; Back to Trade Selector</a></span>
+        <address style="font-style:normal;">
+            <strong>Chaotically Organized AI</strong> &mdash; Bakersfield, CA &mdash; <a href="https://coaibakersfield.com">coaibakersfield.com</a><br>
+            Jason: <a href="tel:6615694244">(661) 569-4244</a> &nbsp;|&nbsp; Frank: <a href="tel:6618637283">(661) 863-7283</a>
+        </address>
+        <span style="margin-top:0.4rem;display:block;">&copy; 2026 Chaotically Organized AI &mdash; <a href="index.html">&#8592; Back to Trade Selector</a></span>
     </footer>
     <script>
         document.querySelectorAll('.faq-question').forEach(btn => {

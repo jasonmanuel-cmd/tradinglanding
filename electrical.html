@@ -77,6 +77,16 @@
     <link rel="stylesheet" href="trade-page.css">
     <style>
         :root { --tc: #f59e0b; --tc-dark: #b45309; --tc-light: rgba(245,158,11,0.12); --tc-glow: rgba(245,158,11,0.3); }
+        .hero-anim { position:absolute; inset:0; pointer-events:none; overflow:hidden; z-index:1; }
+        .bolt { position:absolute; opacity:0; }
+        .bolt svg { fill:#f59e0b; filter:drop-shadow(0 0 12px rgba(245,158,11,0.9)); }
+        @keyframes bolt-flash { 0%,88%,100%{opacity:0;transform:scale(.8)} 90%{opacity:.75;transform:scale(1.15)} 92%{opacity:.1;transform:scale(.9)} 94%{opacity:.6;transform:scale(1.05)} }
+        .b1{top:6%;left:14%;animation:bolt-flash 4.5s infinite}
+        .b2{top:22%;right:10%;animation:bolt-flash 6.2s infinite 1.8s}
+        .b3{top:52%;left:6%;animation:bolt-flash 5.3s infinite 3.1s}
+        .b4{bottom:18%;right:20%;animation:bolt-flash 7.1s infinite 0.5s}
+        .b5{top:38%;right:40%;animation:bolt-flash 8.4s infinite 4.5s}
+        .b6{bottom:35%;left:30%;animation:bolt-flash 5.8s infinite 2.3s}
     </style>
 </head>
 <body>
@@ -100,6 +110,14 @@
     <section class="hero">
         <div class="hero-bg"></div>
         <div class="hero-bg-grid"></div>
+        <div class="hero-anim">
+            <div class="bolt b1"><svg width="44" height="88" viewBox="0 0 44 88"><polygon points="26,0 9,48 22,48 16,88 35,40 22,40"/></svg></div>
+            <div class="bolt b2"><svg width="32" height="64" viewBox="0 0 32 64"><polygon points="19,0 6,35 16,35 12,64 26,29 16,29"/></svg></div>
+            <div class="bolt b3"><svg width="26" height="52" viewBox="0 0 26 52"><polygon points="16,0 5,29 13,29 10,52 21,23 13,23"/></svg></div>
+            <div class="bolt b4"><svg width="22" height="44" viewBox="0 0 22 44"><polygon points="13,0 4,24 11,24 8,44 18,20 10,20"/></svg></div>
+            <div class="bolt b5"><svg width="18" height="36" viewBox="0 0 18 36"><polygon points="11,0 3,20 9,20 7,36 15,16 8,16"/></svg></div>
+            <div class="bolt b6"><svg width="20" height="40" viewBox="0 0 20 40"><polygon points="12,0 4,22 10,22 8,40 17,18 9,18"/></svg></div>
+        </div>
         <div class="hero-content">
             <div class="hero-badge">&#9889; Electrician Websites — Bakersfield, CA</div>
             <h1>Electrical Work Is Built on<br><span class="accent">Trust. Your Website Should Be Too.</span></h1>
@@ -250,9 +268,38 @@
             </div>
         </div>
     </section>
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <p class="section-label">Get In Touch</p>
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-body">Ready to get your electrical business more calls? Reach out to our team directly.</p>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-card-icon">&#127760;</div>
+                    <strong>Website</strong>
+                    <a href="https://coaibakersfield.com" target="_blank" rel="noopener">coaibakersfield.com</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-icon">&#128119;</div>
+                    <strong>Jason</strong>
+                    <a href="mailto:jasonm@coaibakersfield.com">jasonm@coaibakersfield.com</a>
+                    <a href="tel:6615694244" class="contact-phone">(661) 569-4244</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-icon">&#128119;</div>
+                    <strong>Frank</strong>
+                    <a href="mailto:frankh@coaibakersfield.com">frankh@coaibakersfield.com</a>
+                    <a href="tel:6618637283" class="contact-phone">(661) 863-7283</a>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
-        <strong>Chaotically Organized AI</strong> &mdash; Bakersfield, CA &mdash; <a href="tel:6616109198">(661) 610-9198</a><br>
-        <span style="margin-top:0.4rem;display:block;">&copy; 2026 &mdash; <a href="index.html">&#8592; Back to Trade Selector</a></span>
+        <address style="font-style:normal;">
+            <strong>Chaotically Organized AI</strong> &mdash; Bakersfield, CA &mdash; <a href="https://coaibakersfield.com">coaibakersfield.com</a><br>
+            Jason: <a href="tel:6615694244">(661) 569-4244</a> &nbsp;|&nbsp; Frank: <a href="tel:6618637283">(661) 863-7283</a>
+        </address>
+        <span style="margin-top:0.4rem;display:block;">&copy; 2026 Chaotically Organized AI &mdash; <a href="index.html">&#8592; Back to Trade Selector</a></span>
     </footer>
     <script>
         document.querySelectorAll('.faq-question').forEach(btn => {

@@ -77,6 +77,8 @@
     <link rel="stylesheet" href="trade-page.css">
     <style>
         :root { --tc: #8b5cf6; --tc-dark: #6d28d9; --tc-light: rgba(139,92,246,0.12); --tc-glow: rgba(139,92,246,0.3); }
+        .hero-anim { position:absolute; inset:0; pointer-events:none; overflow:hidden; z-index:1; background-image:linear-gradient(rgba(139,92,246,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,.14) 1px,transparent 1px),linear-gradient(rgba(139,92,246,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,.05) 1px,transparent 1px); background-size:120px 120px,120px 120px,24px 24px,24px 24px; animation:bp-pulse 6s ease-in-out infinite alternate; }
+        @keyframes bp-pulse { 0%{opacity:.45} 100%{opacity:1} }
     </style>
 </head>
 <body>
@@ -100,6 +102,7 @@
     <section class="hero">
         <div class="hero-bg"></div>
         <div class="hero-bg-grid"></div>
+        <div class="hero-anim"></div>
         <div class="hero-content">
             <div class="hero-badge">&#127959; Contractor Websites — Bakersfield, CA</div>
             <h1>Big Remodel Jobs Go to<br><span class="accent">Contractors Who Look Like Pros Online</span></h1>
@@ -250,9 +253,38 @@
             </div>
         </div>
     </section>
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <p class="section-label">Get In Touch</p>
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-body">Ready to get your contracting business more calls? Reach out to our team directly.</p>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-card-icon">&#127760;</div>
+                    <strong>Website</strong>
+                    <a href="https://coaibakersfield.com" target="_blank" rel="noopener">coaibakersfield.com</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-icon">&#128119;</div>
+                    <strong>Jason</strong>
+                    <a href="mailto:jasonm@coaibakersfield.com">jasonm@coaibakersfield.com</a>
+                    <a href="tel:6615694244" class="contact-phone">(661) 569-4244</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-icon">&#128119;</div>
+                    <strong>Frank</strong>
+                    <a href="mailto:frankh@coaibakersfield.com">frankh@coaibakersfield.com</a>
+                    <a href="tel:6618637283" class="contact-phone">(661) 863-7283</a>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
-        <strong>Chaotically Organized AI</strong> &mdash; Bakersfield, CA &mdash; <a href="tel:6616109198">(661) 610-9198</a><br>
-        <span style="margin-top:0.4rem;display:block;">&copy; 2026 &mdash; <a href="index.html">&#8592; Back to Trade Selector</a></span>
+        <address style="font-style:normal;">
+            <strong>Chaotically Organized AI</strong> &mdash; Bakersfield, CA &mdash; <a href="https://coaibakersfield.com">coaibakersfield.com</a><br>
+            Jason: <a href="tel:6615694244">(661) 569-4244</a> &nbsp;|&nbsp; Frank: <a href="tel:6618637283">(661) 863-7283</a>
+        </address>
+        <span style="margin-top:0.4rem;display:block;">&copy; 2026 Chaotically Organized AI &mdash; <a href="index.html">&#8592; Back to Trade Selector</a></span>
     </footer>
     <script>
         document.querySelectorAll('.faq-question').forEach(btn => {
